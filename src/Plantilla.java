@@ -2,12 +2,15 @@ import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.sql.*;
 
-public class Plantilla {
+public  class  Plantilla {
     String nombre;
     String apellido;
     String fecha;
@@ -16,9 +19,10 @@ public class Plantilla {
     FileOutputStream archivo;
     Paragraph titulo;
 
-    public Plantilla(String nombre, String apellido, String fecha) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Plantilla(JTextField nombre, JTextField apellido, String fecha) {
+
+        this.nombre = nombre.getText();
+        this.apellido = apellido.getText();
         this.fecha = fecha;
 
         documento = new Document();
@@ -26,7 +30,7 @@ public class Plantilla {
     }
     public void crearPlantilla(){
         try{
-            archivo = new FileOutputStream(nombre + ".pdf");
+            archivo = new FileOutputStream("Factura"+nombre+".pdf");
             PdfWriter.getInstance(documento,archivo);
             documento.open();
             titulo.setAlignment(1);
@@ -36,10 +40,46 @@ public class Plantilla {
             documento.add(new Paragraph("Apellido: " + apellido));
             documento.add(new Paragraph("Fecha: " + fecha));
             documento.add(Chunk.NEWLINE);
+            PdfPTable tabla = new PdfPTable(4);
+            tabla.addCell("CI");
+            tabla.addCell("Nombre");
+            tabla.addCell("Apellido");
+            tabla.addCell("edad");
+            try {
+                Connection con;
+                con = getConection();
+                PreparedStatement st = con.prepareStatement("SELECT * FROM DATOS");
+                ResultSet rs = st.executeQuery();
+                if(rs.next()){
+                    do{
+                        tabla.addCell(rs.getString(1));
+                        tabla.addCell(rs.getString(2));
+                        tabla.addCell(rs.getString(3));
+                        tabla.addCell(rs.getString(4));
+
+                    }while(rs.next());
+                    documento.add(tabla);
+                }
+            }catch (Exception x){
+                System.out.println(x);
+            }
 
             documento.close();
         }catch (FileNotFoundException | DocumentException ex){
-
         }
+    }
+    public static Connection getConection() {
+        Connection con = null;
+        String base = "VEHICULOS";
+        String url = "jdbc:mysql://localhost:3306/" + base;
+        String user = "root";
+        String password = "Pelota2002";
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException | SQLException e) {
+            System.err.println(e);
+        }
+        return con;
     }
 }

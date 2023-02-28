@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf33eb00-d66d-4a74-a54b-d13a053a3d46" name="Changes" comment="" />
+    <list default="true" id="cf33eb00-d66d-4a74-a54b-d13a053a3d46" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/itextpdf_5_5_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PDF.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factura.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factura.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Plantilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Plantilla.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MLThlYHu0XFPq1PceynXovMdJw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,7 +33,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "110",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "249",
+    "last_opened_file_path": "C:/Users/POO/Downloads/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32/mysql-connector-j-8.0.32.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

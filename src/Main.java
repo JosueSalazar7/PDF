@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         Scanner sc  = new Scanner(System.in);
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente");
         String apellido = JOptionPane.showInputDialog("Ingrese el apellido del cliente");
@@ -18,6 +19,6 @@ public class Main {
         Long fecha = date.getTime();
         Plantilla miPlantilla = new Plantilla(nombre,apellido,fecha.toString());
         miPlantilla.crearPlantilla();
-
+        */
     }
 }
